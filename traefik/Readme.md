@@ -12,6 +12,8 @@ sudo certbot certonly --standalone --preferred-challenges http
 curl ifconfig.me
 dig <nama_domain> @1.1.1.1
 sudo ls /etc/letsencrypt/live/<nama_domain>
+         └── fullchain.pem
+         └── privkey.pem
 sudo certbot renew --dry-run
 ```
 > Buat folder cert dan run traefik
