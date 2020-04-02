@@ -13,7 +13,7 @@ cd keycloak
 cek environment di file docker-compose.yml
 sudo docker-compose up
 ```
-## Step 3 [Run TRaefik](traefik/Readme.md)
+## Step 3 [Run TRaefik](traefik/)
 
 ## Step 4 Test Keycloak
 ```bash
