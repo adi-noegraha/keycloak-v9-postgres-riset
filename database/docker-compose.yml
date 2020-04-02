@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  postgres:
+      image: postgres:12
+      volumes:
+        - postgres_data:/var/lib/postgresql/data
+      environment:
+        POSTGRES_DB: keycloak
+        POSTGRES_USER: keycloak
+        POSTGRES_PASSWORD: password
+      networks:
+        - traefik-gateway
+
+networks:
+  traefik-gateway:
+    external:
+       name: jds-dev-network
+
+volumes:
+  postgres_data:
+      driver: local
