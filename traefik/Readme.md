@@ -1,5 +1,5 @@
 ## How To Run Traefik - SSL
-Generate SSL di Certbot
+> Generate SSL di Certbot
 ```bash
 sudo apt-get install software-properties-common
 sudo add-apt-repository universe
@@ -14,11 +14,12 @@ dig <nama_domain> @1.1.1.1
 sudo ls /etc/letsencrypt/live/<nama_domain>
 sudo certbot renew --dry-run
 ```
-Buat folder cert
+> Buat folder cert dan run traefik
 ```bash
 mkdir cert
 cd cert
 copy file fullchain.pem dan privkey.pem ke folder cert
+sudo docker-compose up
 ```
 
 ## Project Structure
